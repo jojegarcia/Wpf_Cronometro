@@ -1,0 +1,16 @@
+﻿<Window x:Class="Wpf.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf.Views"
+        xmlns:viewmodels="clr-namespace:Wpf.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="219,327,0,0" VerticalAlignment="Top" Width="80" Command="{Binding StartCommand}" />
+        <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="339,327,0,0" VerticalAlignment="Top" Width="80" Command="{Binding PauseCommand}" />
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="459,327,0,0" VerticalAlignment="Top" Width="80" Command="{Binding StopCommand}" IsEnabled="{Binding StopEnabled}" />
+        <Label x:Name="lblChronometer" Content="{Binding Time}" HorizontalAlignment="Left" Height="47" Margin="219,156,0,0" VerticalAlignment="Top" Width="320" Padding="0" BorderBrush="Black" BorderThickness="1" FontSize="36" HorizontalContentAlignment="Center" />
+    </Grid>
+</Window>
